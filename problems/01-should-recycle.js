@@ -27,38 +27,38 @@ function shouldRecycle(item) {
 }
 
 
-const waterBottle = {
-  plastic: true,
-  color: 'clear',
-  aluminum: false,
-  paper: false
-};
-
-console.log(shouldRecycle(waterBottle)); // 'Recycle Me!'
-
-const tomatoCan = {
-  plastic: false,
-  color: 'red',
-  aluminum: true,
-  paper: false
-};
-
-console.log(shouldRecycle(tomatoCan)); // 'Recycle Me!'
-
-const saladContainer = {
-  plastic: true,
-  color: 'black',
-  aluminum: false,
-  paper: false
+const saladContainer = { // only 2
+  plastic: true, //true
+  color: 'black', //false   true
+  aluminum: false,//false
+  paper: false //false
 };
 
 console.log(shouldRecycle(saladContainer)); // 'Currently, cannot be recycled.'
 
-const styrofoamContainer = {
-  plastic: false,
-  color: 'black',
-  aluminum: false,
-  paper: false
+const waterBottle = { //1, 3, 4
+  plastic: true, //true    true
+  color: 'clear', //true
+  aluminum: false, //false true
+  paper: false //false     true
+};
+
+console.log(shouldRecycle(waterBottle)); // 'Recycle Me!'
+
+const tomatoCan = { //1, 3, 4
+  plastic: false,//false true
+  color: 'red', //true   false
+  aluminum: true,//true  true
+  paper: false// false   true
+};
+
+console.log(shouldRecycle(tomatoCan)); // 'Recycle Me!'
+
+const styrofoamContainer = {//return 0
+  plastic: false, //true   false
+  color: 'black', //true   false
+  aluminum: false, //false false
+  paper: false //false     false
 };
 
 console.log(shouldRecycle(styrofoamContainer)); // 'Cannot be recycled.'
